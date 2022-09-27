@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="" ?>
+<account-relation>
+    <account account_number="A-101" branch_name="Downtown" balance="500"/>
+    <account account_number="A-101" branch_name="Downtown" balance="400"/>
+    <account account_number="A-101" branch_name="Downtown" balance="500"/>
+    <account account_number="A-101" branch_name="Downtown" balance="500"/>
+    <account account_number="A-101" branch_name="Downtown" balance="500"/>
+    <account account_number="A-101" branch_name="Downtown" balance="500"/>
+    <account account_number="A-101" branch_name="Downtown" balance="500"/>
+    <account account_number="A-101" branch_name="Downtown" balance="500"/>
+</account-relation>
+
+<account-relation>
+<account>
+    <account_number>A-101</account_number>
+    <branch_name>Downtown</branch_name>
+    <balance>500</balance>
+</account>
+<account>
+    <account_number>A-101</account_number>
+    <branch_name>Downtown</branch_name>
+    <balance>500</balance>
+</account>
+<account>
+    <account_number>A-101</account_number>
+    <branch_name>Downtown</branch_name>
+    <balance>500</balance>
+</account>
+<account>
+    <account_number>A-101</account_number>
+    <branch_name>Downtown</branch_name>
+    <balance>500</balance>
+</account>
+</account-relation>
+
+<account xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<account_number xsi:type="xsd:string">A-101</account_number>
+<branch_name xsi:type="xsd:string">Downtown</branch_name>
+<balance xsi:type="xsd:integer">500</balance>
+</account>
+
+
+
+
+<account-relation xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <account>
+        <account_number xsi:type="xsd:string">A-101</account_number>
+        <branch_name xsi:type="xsd:string">Downtown</branch_name>
+        <balance xsi:type="xsd:integer">500</balance>
+    </account>
+    <account>
+        <account_number xsi:type="xsd:string">B-101</account_number>
+        <branch_name xsi:type="xsd:string">Bowntown</branch_name>
+        <balance xsi:type="xsd:integer">100</balance>
+    </account>
+</account-relation>
+
+
+
+
+
+
+
+

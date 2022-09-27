@@ -1,0 +1,14 @@
+package first_project;
+
+class Circle {
+	int x, y;
+	float radius;
+	
+	void print() {
+		System.out.println("x: "+ x + " y: " + y + "r: " + radius);
+	}
+}
+
+public class HelloClass {
+
+}
