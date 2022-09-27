@@ -203,9 +203,7 @@ public class CalcFrame extends JFrame implements ActionListener {
 		} else if (input.equals("<")) {
 			if (mathExp.length() > 0) {
 				mathExp = mathExp.substring(0, mathExp.length() - 1);
-				if (mathExp.length() == 0 || !Character.isDigit(mathExp.charAt(mathExp.length() - 1)))
-					numFlag = false;
-				else
+				if (mathExp.length() == 0 || Character.isDigit(mathExp.charAt(mathExp.length() - 1)))
 					numFlag = true;
 			}
 		} else if (UtilLibrary.isNumeric(input)){

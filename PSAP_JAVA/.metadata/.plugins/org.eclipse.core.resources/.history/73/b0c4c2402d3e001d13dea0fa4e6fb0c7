@@ -199,28 +199,21 @@ public class CalcFrame extends JFrame implements ActionListener {
 			}
 		} else if (input.equals("C")) {
 			mathExp = "";
-			numFlag = false;
 		} else if (input.equals("<")) {
-			if (mathExp.length() > 0) {
-				mathExp = mathExp.substring(0, mathExp.length() - 1);
-				if (mathExp.length() == 0 || !Character.isDigit(mathExp.charAt(mathExp.length() - 1)))
-					numFlag = false;
-				else
-					numFlag = true;
-			}
+			mathExp = mathExp.substring(0, mathExp.length() - 1);
+			if (Character.isDigit(mathExp.charAt(mathExp.length() - 1)))
+				numFlag = true;
 		} else if (UtilLibrary.isNumeric(input)){
 			mathExp += input;
 			numFlag = true;
-		} else if (input.equals("(")) {
-			if (numFlag == false)
-				mathExp += input;
-		} else if (input.equals(")")) {
-			if (numFlag == true)
-				mathExp += input;
 		} else if (numFlag) {
 			mathExp += input;
 			numFlag = false;
-		} 
+		} else if (input.equals("(")) {
+			mathExp += input;
+		} else if (input.equals(")")) {
+			mathExp += input;
+		}
 		label.setText(mathExp);
 	}
 
