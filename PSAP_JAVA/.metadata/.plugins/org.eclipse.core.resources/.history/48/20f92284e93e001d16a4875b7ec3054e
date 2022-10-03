@@ -1,0 +1,16 @@
+package first_project;
+
+import java.util.Scanner;
+
+class Circle {
+	
+}
+
+public class Hw1_1 {
+	Scanner scanner = new Scanner(System.in);
+	
+	
+	scanner.close();
+	
+	
+}

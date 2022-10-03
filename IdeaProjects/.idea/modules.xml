@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DBP-Graph/blueprints/blueprints.iml" filepath="$PROJECT_DIR$/DBP-Graph/blueprints/blueprints.iml" />
       <module fileurl="file://$PROJECT_DIR$/DatabaseProgramming/dbp.iml" filepath="$PROJECT_DIR$/DatabaseProgramming/dbp.iml" />
     </modules>
   </component>

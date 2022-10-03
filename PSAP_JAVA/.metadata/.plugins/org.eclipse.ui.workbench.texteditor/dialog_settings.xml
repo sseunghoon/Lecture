@@ -6,8 +6,9 @@
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="println"/>
+		<item key="selection" value="package first_project;"/>
 		<list key="findhistory">
+			<item value="package first_project;"/>
 			<item value="println"/>
 			<item value="Double"/>
 			<item value="parse"/>
@@ -15,7 +16,6 @@
 			<item value="makeTree"/>
 			<item value="mathExpression"/>
 			<item value="label"/>
-			<item value="Label"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
@@ -28,5 +28,9 @@
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="157"/>
+		<item key="DIALOG_Y_ORIGIN" value="411"/>
 	</section>
 </section>

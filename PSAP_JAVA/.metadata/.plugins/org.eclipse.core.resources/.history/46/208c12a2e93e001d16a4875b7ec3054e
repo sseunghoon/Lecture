@@ -1,0 +1,17 @@
+package first_project;
+
+import java.util.Scanner;
+
+class Circle {
+	
+}
+
+public class Hw1_1 {
+	Scanner scanner = new Scanner(System.in);
+	int arr1[] = new IntArray[3];
+	int arr2[3];
+	
+	scanner.close();
+	
+	
+}
