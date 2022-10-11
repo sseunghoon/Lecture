@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/DatabaseProgramming/pom.xml" />
         <option value="$PROJECT_DIR$/DBP-Graph/blueprints/pom.xml" />
+        <option value="$PROJECT_DIR$/PracticeDBP/blueprints/pom.xml" />
       </list>
     </option>
   </component>
