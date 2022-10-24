@@ -1,4 +1,4 @@
-package org.dbp.lecture;
+package org.dbp.lecture.midterm;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -9,13 +9,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.StringReader;
-import java.net.ConnectException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 import java.util.ArrayList;
 
-public class XMLLoading {
+
+public class CreateXML {
+
     public static void main(String[] args) throws Exception{
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
         Element root = doc.createElement("account");
