@@ -2,6 +2,7 @@ package first_project;
 
 import java.util.Scanner;
 
+
 class Circle {
 	int x;
 	int y;

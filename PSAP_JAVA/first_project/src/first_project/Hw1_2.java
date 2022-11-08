@@ -8,23 +8,8 @@ public class Hw1_2 {
 	public static void main(String args[]) {
 	
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("연산>>");
-		int n1 = scanner.nextInt();
-		String 
-		int n2 = scanner.nextInt();
-		
-		if (list[1].equals("+")) {
-			System.out.println(x +" + " + y + "의 계산 결과는 " + x + y);
-		}
-		if (list[1].equals("-")) {
-			System.out.println(x +" - " + y + "의 계산 결과는 " + (x - y));
-		}
-		if (list[1].equals("*")) {
-			System.out.println(x +" * " + y + "의 계산 결과는 " + (x * y));
-		}
-		if (list[1].equals("/")) {
-			System.out.println(x +" / *" + y + "의 계산 결과는 " + x / y);
-		}
-		scanner.close();
+		System.out.println("명품콘서트홀 예약 시스템입니다.");
+		System.out.println("예약:1, 조회:2, 취소:3, 끝내기:4>>");
+		scanner.nextInt();
 	}
 }

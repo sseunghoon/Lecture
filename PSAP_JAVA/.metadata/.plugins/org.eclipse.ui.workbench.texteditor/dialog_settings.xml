@@ -6,8 +6,15 @@
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="package first_project;"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="app"/>
+			<item value="명품"/>
+			<item value="head"/>
+			<item value="scan"/>
+			<item value="this.keyA"/>
+			<item value="seats[seatNum]"/>
+			<item value="seatNum"/>
 			<item value="package first_project;"/>
 			<item value="println"/>
 			<item value="Double"/>
@@ -19,12 +26,13 @@
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
+			<item value="seats[seatNum - 1]"/>
 			<item value="mathExp"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="504"/>
-		<item key="DIALOG_Y_ORIGIN" value="280"/>
+		<item key="DIALOG_X_ORIGIN" value="403"/>
+		<item key="DIALOG_Y_ORIGIN" value="452"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

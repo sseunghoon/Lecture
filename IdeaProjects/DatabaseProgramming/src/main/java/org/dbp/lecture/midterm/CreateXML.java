@@ -22,6 +22,7 @@ public class CreateXML {
         root.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
 
         Element accountNumber = doc.createElement("accountNumber");
+        root.appendChild(accountNumber);
         accountNumber.setAttribute("xmlns:xsd", "http://www.w3.org/2001/XMLSchema");
         accountNumber.setTextContent("A-101");
     }
