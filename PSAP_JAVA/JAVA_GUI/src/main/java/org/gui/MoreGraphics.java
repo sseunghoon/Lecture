@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Line2D;
+import java.awt.geom.Rectangle2D;
 import java.nio.channels.Pipe;
 import java.util.ArrayList;
 import java.awt.Point;
@@ -24,15 +26,25 @@ class MyStroke {
 
     void draw(Graphics g) {
         g.setColor(color);
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setComposite(AlphaComposite.getInstance(
+                AlphaComposite.SRC_OVER, 0.5f));
+
+        GradientPaint gp = new GradientPaint(0, 0, Color.WHITE, 500, 500, Color.blue);
+        g2.setPaint(gp);
+        g2.fill(new Rectangle2D.Float(10, 10, 70, 80));
+
         for (int i = 0; i < pts.size() - 1; i++) {
             Point p1 = pts.get(i);
             Point p2 = pts.get(i + 1);
-            g.drawLine(p1.x, p1.y, p2.x, p2.y);
+//            g.drawLine(p1.x, p1.y, p2.x, p2.y);
+
+            g2.draw(new Line2D.Float(p1.x, p1.y, p2.x, p2.y));
         }
     }
 }
 
-class MyColorButton extends JButton{
+class MyColorButton extends JButton {
     String rgb;
     Color color;
 
@@ -44,11 +56,11 @@ class MyColorButton extends JButton{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2 = (Graphics2D) g;
+
 
         g.setColor(color);
 
-        g.fillRect(2, 2, getWidth()-6, getHeight()-6);
+        g.fillRect(2, 2, getWidth() - 6, getHeight() - 6);
 
     }
 }
@@ -56,9 +68,14 @@ class MyColorButton extends JButton{
 class MoreGraphicsPanel extends JPanel {
     LinkedList<MyStroke> strokes = new LinkedList<>();
     ArrayList<Point> pts = new ArrayList<>();
-    Color color  = Color.black;
+    Color color = Color.black;
+
+    ArrayList<Shape> shapes = new ArrayList<>();
 
     public MoreGraphicsPanel() {
+        shapes.add(new Rectangle2D.Float(100, 100, 200, 200));
+
+
         MyColorButton but1 = new MyColorButton("R", Color.red);
         but1.addActionListener((e) -> color = but1.color);
 
@@ -96,6 +113,24 @@ class MoreGraphicsPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         strokes.get(strokes.size() - 1).draw(g);
+
+        Graphics2D g2 = (Graphics2D) g;
+
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+        g2.setStroke(new BasicStroke(3));
+
+
+        g2.setColor(Color.orange);
+        g2.setComposite(AlphaComposite.getInstance(
+                        AlphaComposite.SRC_OVER, 0.5f));
+        for (var e : shapes) {
+            g2.draw(e);
+            g2.fill(e);
+        }
+
+        Shape ss = new Rectangle2D.Float(100, 100, 300, 300);
+        g2.draw(ss);
 
         for (MyStroke s : strokes) {
             s.draw(g);
