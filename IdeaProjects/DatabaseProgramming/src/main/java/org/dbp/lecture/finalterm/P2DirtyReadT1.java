@@ -1,5 +1,9 @@
 package org.dbp.lecture.finalterm;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class P2DirtyReadT1 {
 
     public static void main(String[] args) throws SQLException {
@@ -11,7 +15,7 @@ public class P2DirtyReadT1 {
         stmt.executeUpdate("INSERT INTO users VALUES (1,'Joe',20), (2, 'Jill', 25);");
 
         connection.setAutoCommit(false);
-        //        connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+//        connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
         connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
 
         String sql = "SELECT age FROM users WHERE id = 1;";
