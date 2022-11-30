@@ -1,0 +1,675 @@
+/* @media (max-width:500px) {
+	ul {
+		display: none; /* 500px 蹂대떎 �솕硫� �겕湲� �옉�븘吏�硫� �긽�떒 硫붾돱諛� �뾾�뼱吏� 
+	}
+	
+	h1 {
+		display: none; 
+	}
+} */
+
+#first_area {
+  display: flex; 
+}
+
+#logo {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-top: 25px; 
+}
+
+#language {
+  margin-left: 20px; 
+  margin-right: -30px; 
+}
+
+#language_content {
+	font-family: 'Nanum Gothic', sans-serif;
+  	font-size: 17px;
+  	width: 100px; 
+  	
+  	margin-top: -35px; 
+  	margin-left: 70px; 
+  	 
+}
+
+#login_content, #logout_content{
+	font-family: 'Nanum Gothic', sans-serif;
+    font-size: 17px; 
+    text-decoration: none;
+   
+	width: 100px;  
+    height: 10px; 
+    
+    margin-right: -30px; 
+    margin-top: -35px; 
+}
+
+#login {
+	width: 100px;  
+    height: 50px; 
+    
+    margin-right: -20px; 
+    margin-left: 20px; 
+    margin-bottom: -100px; 
+}
+
+/* type-11 */
+/* 전체 메뉴를 감싸는 원 파형이 살며시 퍼지며 엑스버튼 만들기 */
+
+.menubar li.type11:nth-of-type(1) {
+    -webkit-animation : menu-bar11-01 .5s forwards;
+    animation : menu-bar11-01 .5s forwards;
+}
+@-webkit-keyframes menu-bar11-01 {
+    0% {
+        -webkit-transform : translateY(20px) rotate(-45deg);
+    }
+    100% {
+        -webkit-transform : translateY(0) rotate(0deg);
+    }
+}
+@keyframes menu-bar11-01 {
+    0% {
+        transform : translateY(20px) rotate(-45deg);
+    }
+    100% {
+        transform : translateY(0) rotate(0deg);
+    }
+}
+.menubar li.type11:nth-of-type(2) {
+    -webkit-animation : menu-bar11-02 .5s forwards;
+    animation : menu-bar11-02 .5s forwards;
+}
+@-webkit-keyframes menu-bar11-02 {
+    0% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 1;
+    }
+}
+@keyframes menu-bar11-02 {
+    0% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 1;
+    }
+}
+.menubar li.type11:nth-of-type(3) {
+    -webkit-animation : menu-bar11-03 .5s forwards;
+    animation : menu-bar11-03 .5s forwards;
+}
+@-webkit-keyframes menu-bar11-03 {
+    0% {
+        -webkit-transform : translateY(-20px) rotate(45deg);
+    }
+    100% {
+        -webkit-transform : translateY(0) rotate(0deg);
+    }
+}
+@keyframes menu-bar11-03 {
+    0% {
+        transform : translateY(-20px) rotate(45deg);
+    }
+    100% {
+        transform : translateY(0) rotate(0deg);
+    }
+}
+.menubar.type11:after {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    display : block;
+    content : '';
+    width : 30px;
+    height : 30px;
+    margin : -16px 0 0 -16px;
+    border-radius : 50%;
+    border : 1px solid rgba(255,255,255, 0.3);
+    transition : all .1s;
+    opacity : 0;
+}
+.menubar.active-11:after {
+    -webkit-animation : circle .5s;
+    animation : circle .5s;
+}
+@-webkit-keyframes circle {
+    0% {
+        -webkit-transform : scale(0.1);
+        opacity : 0;
+    }
+    50% {
+        opacity : 1;
+    }
+    100 % {
+        -webkit-transform : scale(3.5);
+        opacity : 0;
+    }
+}
+@keyframes circle {
+    0% {
+        transform : scale(0.1);
+        opacity : 0;
+    }
+    50% {
+        opacity : 1;
+    }
+    100% {
+        transform : scale(3.5);
+        opacity : 0;
+    }
+}
+.menubar.active-11 li:nth-of-type(1) {
+    -webkit-animation : active-menu-bar11-01 .5s .5s forwards;
+    animation : active-menu-bar11-01 .5s .5s forwards;
+}
+@-webkit-keyframes active-menu-bar11-01 {
+    0% {
+        -webkit-transform : translateY(0) rotate(0deg);
+    }
+    100% {
+        -webkit-transform : translateY(20px) rotate(-45deg);
+    }
+}
+@keyframes active-menu-bar11-01 {
+    0% {
+        transform : translateY(0) rotate(0deg);
+    }
+    100% {
+        transform : translateY(20px) rotate(-45deg);
+    }
+}
+.menubar.active-11 li:nth-of-type(2) {
+    -webkit-animation : active-menu-bar11-02 .5s .5s forwards;
+    animation : active-menu-bar11-02 .5s .5s forwards;
+}
+@-webkit-keyframes active-menu-bar11-02 {
+    0% {
+        opacity : 1;
+    }
+    100%  {
+        opacity : 0;
+    }
+}
+@keyframes active-menu-bar11-02 {
+    0% {
+        opacity : 1;
+    }
+    100% {
+        opacity : 0;
+    }
+}
+.menubar.active-11 li:nth-of-type(3) {
+    -webkit-animation : active-menu-bar11-03 .5s .5s forwards;
+    animation : active-menu-bar11-03 .5s .5s forwards;
+}
+@-webkit-keyframes active-menu-bar11-03 {
+    0% {
+        -webkit-transform : translateY(0) rotate(0deg);
+    }
+    100% {
+        -webkit-transform : translateY(-20px) rotate(45deg);
+    }
+}
+@keyframes active-menu-bar11-03 {
+    0% {
+        transform : translateY(0) rotate(0deg);
+    }
+    100% {
+        transform : translateY(-20px) rotate(45deg);
+    }
+}
+
+/*
+#menubar {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 17px;
+  margin-left: 5%; 
+  
+  display: block; 
+  
+  width: 1000px;  
+  height: 80px; 
+  
+  margin-right: -140px; 
+ 
+}
+
+
+* { 
+  margin: 0px;
+  padding: 0px;
+}
+
+#menubar ul { 
+  list-style: none;
+ 
+}
+
+#menubar ul li { 
+  /*background-color: #a17474;
+  border: 1px solid #a17474; 
+  width: 140px; 
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  position: relative; 
+  color: black; 
+ 
+}
+
+#menubar ul li a {
+  text-decoration: none; 
+  color: black; 
+  display: block;
+}
+
+#menubar ul li a:hover {
+  background-color: #b58d8d;
+}
+
+#menubar ul ul { 
+  display: none;
+  position: absolute; 
+}
+
+#menubar ul li:hover > ul { 
+  display: block;
+}
+*/
+
+/* body {
+  background: url(background_img_3.jpg) no-repeat center center fixed; /* 獄쏄퀗瑗랃옙�넅筌롳옙 筌�袁⑹뒭疫뀐옙 (占쎈연獄쏉옙 占쎈씨占쎌뵠) - �⑥쥚�넅筌욑옙 占쎄텢筌욑옙 占쎈툡占쎌뒄占쎈맙
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+#title {
+  color: black; 
+  font-size: 50px;
+  margin-left: 8%;
+  margin-top: 10%;
+ 
+  width: 1000px; 
+  height: 120px; 
+}
+
+#subtitle {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: black; 
+  font-size: 25px;
+  margin-left: 8%;
+  margin-top: 2%;
+  
+  width: 700px; 
+}
+
+#title_animation { /* 占쏙옙占쎌뵠占쏙옙 占쎈막占쎈빍筌롫뗄�뵠占쎈�� 筌욑옙占쎌젟 */
+  animation-name: slidein;
+  animation-duration: 3s;
+  animation-delay:1s;
+}
+
+@keyframes slidein { /* slidein 占쎈막占쎈빍筌롫뗄�뵠占쎈�� 占쎈꺗占쎄쉐 筌욑옙占쎌젟 */
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+#Notice, #Promotion, #Claims, #Departments{ /* 筌ㅼ뮄�젏 疫뀐옙 占쎄퉳占쎄맒 占쎈쾻 �⑤벏�꽰占쎌뒄占쎈꺖 */
+  color: black;
+  text-decoration: none;
+  
+  width: 500px; 
+  height: 280px; 
+  
+}
+
+#notice {
+  display: inline-block;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  margin-top: 30%; 
+  margin-left: 7%; 
+  
+  text-align: center; 
+  
+}
+
+#promotion {
+  display: inline-block;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px; 
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  text-align: center; 
+  
+  margin-left: 2%; 
+
+}
+
+#claim {
+	display: inline-block;
+   font-family: 'Nanum Gothic', sans-serif;
+   font-size: 20px;
+   border: solid 2px black; 
+   width: 500px; 
+   height: 280px; 
+   
+   margin-left: 7%; 
+   margin-top: 3%; 
+   
+   text-align: center; 
+}
+
+#departments {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  text-align: center; 
+  
+  margin-left: 42%; 
+  margin-top: -280px; 
+ 
+}
+
+table {
+ margin-top: 8%;
+ border-collapse: collapse;
+ margin-left: auto;
+ margin-right: auto;
+ width: 90%;
+ margin-bottom: 30px; 
+}
+
+table, td, tr {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+#quick_menu {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+footer {
+   display: inline-block;
+   border: 4px solid #dbdad9; 
+   width: full; 
+   height: 100px; 
+   background-color: #e8e7e6; 
+   text-align: center; 
+   left: 0px; 
+}
+
+#footer_content {
+   padding-top: 30px; 
+   padding-right: 10px; 
+}
+
+#hr1 {
+   width: 82%; 
+   border: double 4px white; 
+   margin-top: 6%; 
+}
+
+#board {
+   text-align: center; 
+}
+
+
+#logo {
+  margin-left: 100%; 
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-top: 25px; 
+}
+
+#language {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  margin-top: 45px; 
+  
+  color: black; 
+}
+
+#login {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  margin-top: 45px; 
+  text-decoration: none;
+  
+  color: black;
+}
+
+#menubar {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  margin-left: 5%;
+  padding-top: 35px;
+}
+
+
+* { /* 筌뤴뫀諭� 占쎄묶域밸챷�벥 筌띾뜆彛딀�⑨옙 占쎈솭占쎈뎃揶쏅�れ뱽 �룯�뜃由곤옙�넅 */
+  margin: 0px;
+  padding: 0px;
+}
+
+#menubar ul { /* �뵳�딅뮞占쎈뱜 占쎈뮞占쏙옙占쎌뵬 占쎈씨占쎈막疫뀐옙 */
+  list-style: none;
+}
+
+#menubar ul li { /*占쎄맒占쎌맄 筌롫뗀�뤀 */
+  /*background-color: #a17474;
+  border: 1px solid #a17474; */
+  width: 140px; /* 筌롫뗀�뤀 獄쏅벡�뮞 揶쏉옙嚥∽옙 疫뀀챷�뵠 */
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  position: relative; /* 占쎄맒占쎌맄 筌롫뗀�뤀占쎌벥 占쎌맄燁살꼶占쏙옙 */
+  color: black; 
+}
+
+#menubar ul li a {
+  text-decoration: none; /* 筌띻낱寃� 獄쏅쵐夷� 占쎈씨占쎈퉲 */
+  color: black; 
+  display: block;
+}
+
+#menubar ul li a:hover {
+  background-color: #b58d8d;
+}
+
+#menubar ul ul { /* 占쎈즸占쎈꺖占쎈퓠占쎈뮉 占쎈릭占쎌맄 筌롫뗀�뤀揶쏉옙 癰귣똻�뵠筌욑옙 占쎈륫野껓옙 占쎌읅占쎌뒠 */
+  display: none;
+  position: absolute; /* 占쎈릭占쎌맄 筌롫뗀�뤀揶쏉옙 占쎄맒占쎌맄 筌롫뗀�뤀占쎌벥 占쎌맄燁살꼶占쏙옙 疫꿸퀣占쏙옙�몵嚥∽옙 占쎌쁽�뵳�딆삜占쎌벉 */
+}
+
+#menubar ul li:hover > ul { /* menubar 占쎈툧占쎌벥 筌뤴뫀諭� ul li占쎈퓠 筌띾뜆�뒭占쎈뮞 �뚣끉苑� 占쎌궞�뵳�됥늺 域뱄옙 占쎈툡占쎌삋 ul 癰귣똻�뵠占쎈즲嚥∽옙 (占쎈릭占쎌맄筌롫뗀�뤀 占쎈탵占쎈뮞占쎈탣占쎌쟿占쎌뵠)*/
+  display: block;
+}
+
+/* body {
+  background: url(background_img_3.jpg) no-repeat center center fixed; /* 獄쏄퀗瑗랃옙�넅筌롳옙 筌�袁⑹뒭疫뀐옙 (占쎈연獄쏉옙 占쎈씨占쎌뵠) - �⑥쥚�넅筌욑옙 占쎄텢筌욑옙 占쎈툡占쎌뒄占쎈맙
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+#title {
+  color: black; 
+  font-size: 50px;
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+#subtitle {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: black; 
+  font-size: 25px;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+
+#title_animation { /* 占쏙옙占쎌뵠占쏙옙 占쎈막占쎈빍筌롫뗄�뵠占쎈�� 筌욑옙占쎌젟 */
+  animation-name: slidein;
+  animation-duration: 3s;
+  animation-delay:3s;
+}
+
+@keyframes slidein { /* slidein 占쎈막占쎈빍筌롫뗄�뵠占쎈�� 占쎈꺗占쎄쉐 筌욑옙占쎌젟 */
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+#Notice, #Promotion, #Claims, #Departments{ /* 筌ㅼ뮄�젏 疫뀐옙 占쎄퉳占쎄맒 占쎈쾻 �⑤벏�꽰占쎌뒄占쎈꺖 */
+  color: black;
+  text-decoration: none;
+}
+
+#notice {
+  display: inline-block;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  margin-top: 30%; 
+  margin-left: 7%; 
+  
+  text-align: center; 
+  
+  
+}
+
+#promotion {
+  display: inline-block;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px; 
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  text-align: center; 
+  
+  margin-left: 2%; 
+
+}
+
+#claim {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 20px;
+	border: solid 2px black; 
+	width: 500px; 
+	height: 280px; 
+	
+	margin-left: 7%; 
+	margin-top: 3%; 
+	
+	text-align: center; 
+}
+
+#departments {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  text-align: center; 
+  
+  margin-left: 49%; 
+  margin-top: -280px; 
+ 
+}
+
+table {
+ margin-top: 8%;
+ border-collapse: collapse;
+ margin-left: auto;
+ margin-right: auto;
+ width: 90%;
+ margin-bottom: 30px; 
+}
+
+table, td, tr {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+#quick_menu {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+footer {
+	display: inline-block;
+	border: 4px solid #dbdad9; 
+	width: full; 
+	height: 100px; 
+	background-color: #e8e7e6; 
+	text-align: center; 
+	left: 0px; 
+}
+
+#footer_content {
+	padding-top: 30px; 
+	padding-right: 10px; 
+}
+
+#hr1 {
+	width: 82%; 
+	border: double 4px white; 
+	margin-top: 6%; 
+}
+
+#board {
+	text-align: center; 
+}

@@ -1,0 +1,233 @@
+#first_area {
+  display: flex; /* first area �깭洹� �궡�쓽 �슂�냼�뱾 �넂�씠 �룞�씪�븯寃� 留욎떠以� */
+}
+
+#logo {
+  margin-left: 100%; 
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-top: 25px; 
+}
+
+#language {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  margin-top: 45px; 
+  
+  color: black; 
+}
+
+#login {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  margin-top: 45px; 
+  text-decoration: none;
+  
+  color: black;
+}
+
+#menubar {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  margin-left: 7%;
+  padding-top: 35px;
+}
+
+
+* { /* 紐⑤뱺 �깭洹몄쓽 留덉쭊怨� �뙣�뵫媛믪쓣 珥덇린�솕 */
+  margin: 0px;
+  padding: 0px;
+}
+
+#menubar ul { /* 由ъ뒪�듃 �뒪���씪 �뾾�븷湲� */
+  list-style: none;
+}
+
+#menubar ul li { /*�긽�쐞 硫붾돱 */
+  /*background-color: #a17474;
+  border: 1px solid #a17474; */
+  width: 140px; /* 硫붾돱 諛뺤뒪 媛�濡� 湲몄씠 */
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  position: relative; /* �긽�쐞 硫붾돱�쓽 �쐞移섎�� */
+  color: black; 
+}
+
+#menubar ul li a {
+  text-decoration: none; /* 留곹겕 諛묒쨪 �뾾�빊 */
+  color: black; 
+  display: block;
+}
+
+#menubar ul li a:hover {
+  background-color: #b58d8d;
+}
+
+#menubar ul ul { /* �룊�냼�뿉�뒗 �븯�쐞 硫붾돱媛� 蹂댁씠吏� �븡寃� �쟻�슜 */
+  display: none;
+  position: absolute; /* �븯�쐞 硫붾돱媛� �긽�쐞 硫붾돱�쓽 �쐞移섎�� 湲곗��쑝濡� �옄由ъ옟�쓬 */
+}
+
+#menubar ul li:hover > ul { /* menubar �븞�쓽 紐⑤뱺 ul li�뿉 留덉슦�뒪 而ㅼ꽌 �삱由щ㈃ 洹� �븘�옒 ul 蹂댁씠�룄濡� (�븯�쐞硫붾돱 �뵒�뒪�뵆�젅�씠)*/
+  display: block;
+}
+
+/* body {
+  background: url(background_img_3.jpg) no-repeat center center fixed; /* 諛곌꼍�솕硫� 梨꾩슦湲� (�뿬諛� �뾾�씠) - 怨좏솕吏� �궗吏� �븘�슂�븿
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+#title {
+  color: black; 
+  font-size: 50px;
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+#subtitle {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: black; 
+  font-size: 25px;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+
+#title_animation { /* ���씠�� �븷�땲硫붿씠�뀡 吏��젙 */
+  animation-name: slidein;
+  animation-duration: 3s;
+  animation-delay:10s;
+}
+
+@keyframes slidein { /* slidein �븷�땲硫붿씠�뀡 �냽�꽦 吏��젙 */
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+#Notice, #Promotion, #Claims, #Departments{ /* 理쒓렐 湲� �깋�긽 �벑 怨듯넻�슂�냼 */
+  color: black;
+  text-decoration: none;
+}
+
+#notice {
+  display: inline-block;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  margin-top: 30%; 
+  margin-left: 7%; 
+  
+  text-align: center; 
+  
+  
+}
+
+#promotion {
+  display: inline-block;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px; 
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  text-align: center; 
+  
+  margin-left: 2%; 
+
+}
+
+#claim {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 20px;
+	border: solid 2px black; 
+	width: 500px; 
+	height: 280px; 
+	
+	margin-left: 7%; 
+	margin-top: 3%; 
+	
+	text-align: center; 
+}
+
+#departments {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  border: solid 2px black; 
+  width: 500px; 
+  height: 280px; 
+  
+  text-align: center; 
+  
+  margin-left: 49%; 
+  margin-top: -280px; 
+ 
+}
+
+table {
+ margin-top: 8%;
+ border-collapse: collapse;
+ margin-left: auto;
+ margin-right: auto;
+ width: 90%;
+ margin-bottom: 30px; 
+}
+
+table, td, tr {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+#quick_menu {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+footer {
+	display: inline-block;
+	border: 4px solid #dbdad9; 
+	width: full; 
+	height: 100px; 
+	background-color: #e8e7e6; 
+	text-align: center; 
+	left: 0px; 
+}
+
+#footer_content {
+	padding-top: 30px; 
+	padding-right: 10px; 
+}
+
+#hr1 {
+	width: 82%; 
+	border: double 4px white; 
+	margin-top: 6%; 
+}
+
+#board {
+	text-align: center; 
+}

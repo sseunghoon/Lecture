@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+<display-name>SnS</display-name>
+<welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+</welcome-file-list>
+<servlet>
+    <servlet-name>UserProfileServlet</servlet-name>
+    <servlet-class>user.UserProfileServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>UserProfileServlet</servlet-name>
+    <url-pattern>/userProfile</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>GalleryServlet</servlet-name>
+    <servlet-class>gallery.GalleryServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>GalleryServlet</servlet-name>
+    <url-pattern>/gallery</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>ComplaintsServlet</servlet-name>
+    <servlet-class>complaints.ComplaintsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ComplaintsServlet</servlet-name>
+    <url-pattern>/complaints</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>PostServlet</servlet-name>
+    <servlet-class>post.PostServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>PostServlet</servlet-name>
+    <url-pattern>/post</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>BoardCreateServlet</servlet-name>
+    <servlet-class>board.BoardCreateServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>BoardCreateServlet</servlet-name>
+    <url-pattern>/boardCreate</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>BoardUpdateServlet</servlet-name>
+    <servlet-class>board.BoardUpdateServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>BoardUpdateServlet</servlet-name>
+    <url-pattern>/boardUpdate</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>PageLogoServlet</servlet-name>
+    <servlet-class>page.PageLogoServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>PageLogoServlet</servlet-name>
+    <url-pattern>/pageLogo</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>PageImageServlet</servlet-name>
+    <servlet-class>page.PageImageServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>PageImageServlet</servlet-name>
+    <url-pattern>/pageImage</url-pattern>
+</servlet-mapping>
+</web-app>

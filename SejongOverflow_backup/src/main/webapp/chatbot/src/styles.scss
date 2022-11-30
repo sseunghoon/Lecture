@@ -1,0 +1,212 @@
+#first_area {
+  display: flex; /* first area 태그 내의 요소들 높이 동일하게 맞춰줌 */
+}
+
+#logo {
+  margin-left: 100%;
+  width: 60px;
+  height: 60px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+#language {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  margin-top: 45px;
+  color: black;
+}
+
+#login {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  margin-top: 45px;
+  color: black;
+  text-decoration: none;
+
+}
+
+#menubar {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  margin-left: 5%;
+  padding-top: 35px;
+}
+
+* { /* 모든 태그의 마진과 패딩값을 초기화 */
+  margin: 0px;
+  padding: 0px;
+}
+
+#menubar ul { /* 리스트 스타일 없애기 */
+  list-style: none;
+}
+
+#menubar ul li { /*상위 메뉴 */
+  /*background-color: #a17474;
+  border: 1px solid #a17474; */
+  width: 140px; /* 메뉴 박스 가로 길이 */
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  position: relative; /* 상위 메뉴의 위치를 */
+}
+
+#menubar ul li a {
+  text-decoration: none; /* 링크 밑줄 없앰 */
+  color: black;
+  display: block;
+}
+
+#menubar ul li a:hover {
+  background-color: #b58d8d;
+}
+
+#menubar ul ul { /* 평소에는 하위 메뉴가 보이지 않게 적용 */
+  display: none;
+  position: absolute; /* 하위 메뉴가 상위 메뉴의 위치를 기준으로 자리잡음 */
+}
+
+#menubar ul li:hover > ul { /* menubar 안의 모든 ul li에 마우스 커서 올리면 그 아래 ul 보이도록 (하위메뉴 디스플레이)*/
+  display: block;
+}
+
+body {
+  background: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#title {
+  color: black;
+  font-size: 50px;
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+#subtitle {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: black;
+  font-size: 25px;
+  margin-left: 8%;
+  margin-top: 2%;
+}
+
+#title_animation { /* 타이틀 애니메이션 지정 */
+  animation-name: slidein;
+  animation-duration: 3s;
+
+}
+
+@keyframes slidein { /* slidein 애니메이션 속성 지정 */
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+table {
+  border-collapse: collapse;
+  color: black;
+}
+table, th, td {
+  border: 1px solid white;
+  color: black;
+  text-decoration: none;
+}
+
+th, td {
+  padding: 15px;
+}
+#content_table{
+
+}
+#container {
+    max-width: 1180px;
+    margin: 60px auto 100px;
+    height: 100px;
+    margin-top: 100px;
+}
+#container nav {
+    float: left;
+    width: 200px;
+    margin-left: 2%;
+
+}
+#container nav h2 {
+    padding-bottom: 13px;
+    font-size: 25px;
+    color: black;
+    line-height: 200%;
+    font-weight: normal;
+    word-break: keep-all;
+    background: url(bg_lnb_top.png) no-repeat bottom;
+}
+.content {
+    width: 75%;
+    float:right;
+}
+.content header h1{
+  color: black;
+  padding-bottom: 15px;
+}
+ul, ol {
+    list-style: none;
+}
+.lnb_deps2 > li {
+    min-height: 50px;
+    box-sizing: border-box;
+    padding: 15px 3px;
+    border-bottom: 1px solid #dadada;
+    font-size: 16px;
+    color: black;
+    display:inline-block;
+
+}
+.lnb_deps2 > li >a{
+   text-decoration:none ;
+   color: black;
+   display:inline-block;
+
+}
+.content_table{
+	display:inline;
+	position:absoulte;
+}
+.find_content{
+	float:right;
+	display:inline;
+}
+a{
+  color: black;
+}
+footer {
+	display: inline-block;
+	border: 4px solid #dbdad9;
+	width: 100%;
+	height: 100px;
+	background-color: #e8e7e6;
+	text-align: center;
+
+	margin-top: 30px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+#footer_content {
+	padding-top: 30px;
+	padding-right: 10px;
+}

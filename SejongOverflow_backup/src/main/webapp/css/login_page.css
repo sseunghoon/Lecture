@@ -1,0 +1,198 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{margin:0; padding:0;}
+#wrap{
+  max-width:890px;
+  width:100%;
+  max-height:699px;
+  height:auto;
+  margin:100px auto; /*padding:35px 88px;*/
+ }
+#log-title{
+  display:inline-block;
+  float:left;
+}
+#log-title .title{
+  color:#c70027;
+  font-family: 'Nanum Gothic', serif;
+  font-size:70px;
+  font-weight:bold;
+  letter-spacing:-3px;
+}
+#subtitle{
+  color:#314e62;
+  font-family: 'Nanum Gothic', serif;
+  font-size:24px;
+  font-weight:bold;
+}
+.sub-text{
+  color:#8c8c8c;
+  font-family: 'Nanum Gothic', serif;
+  font-size:20px;
+  font-weight:bold;
+}
+#top{
+  border-bottom:1px solid #e8eaec;
+  height:239px;
+  width:746px;
+  margin:0 auto;
+}
+#center{
+  border-bottom:1px solid #e8eaec;
+  height:300px;
+  width:746px;
+  margin:0 auto;
+}
+#login_box{
+  display:inline-block;
+  float:left;
+  width:360px;
+  margin-top:120px;
+  margin-left:100px;
+  height:64px;
+}
+fieldset{
+  border:none;
+}
+
+#box1{
+  width:247px;
+  height:210px;
+  display:inline-block;
+  float:left;
+  border:1px solid #e8eaec;
+  margin-top:35px;
+  padding-top:20px;
+}
+#box1 img{
+  border:0;
+}
+
+#box2{
+  width:247px;
+  height:210px;
+  display:inline-block;
+  float:left;
+  border-top:1px solid #e8eaec;
+  margin-top:35px;
+  border-right:1px solid #e8eaec;
+  border-bottom:1px solid #e8eaec;
+  padding-top:20px;
+}
+
+#box2 img{
+  border:0;
+}
+
+#box3{
+  width:247px;
+  height:210px;
+  display:inline-block;
+  float:left;
+  border-top:1px solid #e8eaec;
+  margin-top:35px;
+  border-right:1px solid #e8eaec;
+  border-bottom:1px solid #e8eaec;
+  padding-top:20px;
+}
+#box3 img{
+  border:0;
+}
+
+#footer{
+  width:746px;
+  height:130px;
+  margin:0 auto;
+}
+
+#footer ul{
+  list-style:none;
+}
+
+.red{
+  color:#c70027;
+  margin-top:20px;
+  font-family: 'Nanum Gothic', serif;
+  font-weight:bold;
+}
+.red1{
+  color:#898989;
+  border-left:0px solid #b4b4b4;
+  margin-top:33px; font-size:13px;
+  font-family: 'Nanum Gothic', serif;
+}
+.mt2{
+  margin-top:-2px;
+}
+.mr10{
+  margin-right:15px;
+}
+#left{
+  display:inline-block;
+  float:left;
+  margin-left:20px;
+}
+
+#right{
+  float:left;
+  margin-left:240px;
+  line-height:130px;
+  padding-top:20px;
+}
+    /*로그박스*/
+    /*
+    #logbtn{  background:#c70027; width:89px; height:56px; color:#FFF; font-family: 'Nanum Gothic', serif; font-size:17px; float:right; clear:both; margin-top:-59px; margin-left:40px; border:none;
+    font-weight:bold;}
+
+    #password{border:1px #bababa solid; background:#fff; width:170px; height:25px; margin-left:27px; margin-top:2px; vertical-align:middle;  }
+
+    #id{border:1px #bababa solid; background:#fff; width:170px; height:25px; margin-left:6px; vertical-align:middle;  }*/
+#logbtn{
+  background:#c70027;
+  width:89px;
+  height:56px;
+  color:#FFF;
+  font-family: 'Nanum Gothic', serif;
+  font-size:17px; float:right; clear:both;
+  margin-top:-57px;
+  margin-left:40px;
+  border:none;
+  font-weight:bold;
+}
+
+#password{
+  border:1px #bababa solid;
+  background:#fff;
+  width:170px;
+  height:25px;
+  margin-left:27px;
+  margin-top:4px;
+}
+
+#id{
+  border:1px #bababa solid;
+  background:#fff;
+  width:170px;
+  height:25px;
+  margin-left:6px;
+  margin-top:2px;
+}
+.subtitle {
+    color: #314e62;
+    font-family: 'Nanum Gothic', serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input[type="id"] {vertical-align:middle;}
+input[type="password"]  {vertical-align:middle;}
+
+label{ font-family: 'Nanum Gothic', serif; font-size:16px; color:#747575; font-weight:bold; }
+    /*새로추가*/
+.subtitle1{
+  color:#b2b2b2;
+  font-family: 'Nanum Gothic', serif;
+  font-size:14px;
+  display:block;
+  clear:both;
+  text-align : right;
+}

@@ -1,0 +1,13 @@
+#join{
+  font-weight: bold;
+  font-size: 50px;
+  color:#c70027;
+}
+
+.jumbotron{
+  background-color: white;
+}
+
+#btn_log{
+  background-color:#c70027;
+}

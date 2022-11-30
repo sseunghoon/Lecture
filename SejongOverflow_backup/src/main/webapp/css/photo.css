@@ -1,0 +1,109 @@
+#first_area {
+  display: flex; /* first area 태그 내의 요소들 높이 동일하게 맞춰줌 */
+}
+
+#logo {
+  margin-left: 100%;
+  width: 60px;
+  height: 60px;
+  padding-top: 25px;
+  display: inline-block;
+}
+
+#language {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  padding-top: 40px;
+}
+
+#login {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 3%;
+  padding-top: 40px;
+}
+
+#menubar {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  margin-left: 5%;
+  padding-top: 35px;
+}
+
+* { /* 모든 태그의 마진과 패딩값을 초기화 */
+  margin: 0px;
+  padding: 0px;
+}
+
+#menubar ul { /* 리스트 스타일 없애기 */
+  list-style: none;
+}
+
+#menubar ul li { /*상위 메뉴 */
+  /*background-color: #a17474;
+  border: 1px solid #a17474; */
+  width: 140px; /* 메뉴 박스 가로 길이 */
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  position: relative; /* 상위 메뉴의 위치를 */
+}
+
+#menubar ul li a {
+  text-decoration: none; /* 링크 밑줄 없앰 */
+  display: block;
+  color: black;
+}
+
+#menubar ul li a:hover {
+  background-color: #b58d8d;
+}
+
+#menubar ul ul { /* 평소에는 하위 메뉴가 보이지 않게 적용 */
+  display: none;
+  position: absolute; /* 하위 메뉴가 상위 메뉴의 위치를 기준으로 자리잡음 */
+}
+
+#menubar ul li:hover > ul { /* menubar 안의 모든 ul li에 마우스 커서 올리면 그 아래 ul 보이도록 (하위메뉴 디스플레이)*/
+  display: block;
+}
+
+#title {
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-left: 14%;
+  font-size: 30px;
+  margin-top: 3%;
+  display: inline-block;
+}
+
+#gallery_all {
+  margin-left: 11%;
+  margin-top: 5%;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  margin-left: 2%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
