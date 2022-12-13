@@ -1,4 +1,4 @@
-package org.dbp.lecture;
+package org.dbp.lecture.midterm;
 
 import com.tinkerpop.blueprints.Direction;
 import com.tinkerpop.blueprints.Edge;

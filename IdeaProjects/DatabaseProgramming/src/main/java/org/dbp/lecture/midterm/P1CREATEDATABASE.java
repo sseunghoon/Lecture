@@ -1,4 +1,4 @@
-package org.dbp.lecture;
+package org.dbp.lecture.midterm;
 
 import javax.swing.plaf.nimbus.State;
 import java.sql.*;

@@ -1,4 +1,4 @@
-package org.dbp.lecture;
+package org.dbp.lecture.midterm;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

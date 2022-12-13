@@ -1,4 +1,4 @@
-package org.dbp.lecture;
+package org.dbp.lecture.midterm;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

@@ -1,4 +1,4 @@
-package org.dbp.lecture;
+package org.dbp.lecture.midterm;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
