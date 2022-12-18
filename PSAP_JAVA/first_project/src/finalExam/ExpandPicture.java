@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -31,13 +33,34 @@ class ExpandPicturePanel extends JPanel {
 			public void mouseMoved(MouseEvent e) {
 				// TODO Auto-generated method stub
 				super.mouseMoved(e);
-				x = e.getX() - size;
+				x = e.getX() - (size / 2);
 				if (x < 0) x = 0; if (x > img.getWidth() - size) x = img.getWidth() - size;
-				y = e.getY() - size;
+				y = e.getY() - (size / 2);
 				if (y < 0) y = 0; if (y > img.getHeight() - size) y = img.getHeight() - size;
 				repaint();
 			}
-			
+			@Override
+			public void mouseDragged(MouseEvent e) {
+				// TODO Auto-generated method stub
+				super.mouseDragged(e);
+				x = e.getX() - (size / 2);
+				if (x < 0) x = 0; if (x > img.getWidth() - size) x = img.getWidth() - size;
+				y = e.getY() - (size / 2);
+				if (y < 0) y = 0; if (y > img.getHeight() - size) y = img.getHeight() - size;
+				repaint();
+			}
+		});
+		addMouseWheelListener(new MouseWheelListener() {			
+			@Override
+			public void mouseWheelMoved(MouseWheelEvent e) {
+				// TODO Auto-generated method stub
+				int rot = e.getWheelRotation();
+				size += rot* 5;
+				if (size < 10) {
+					size = 10;
+				}
+				repaint();
+			}
 		});
 	}
 	
@@ -46,10 +69,15 @@ class ExpandPicturePanel extends JPanel {
 		// TODO Auto-generated method stub
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D)g;
-		g2.setStroke(new BasicStroke(4));
-		g2.drawRect(x, y, size, size);
+		
+		
+		if (x < 0) x = 0; if (x > img.getWidth() - size) x = img.getWidth() - size;
+		if (y < 0) y = 0; if (y > img.getHeight() - size) y = img.getHeight() - size;
 		
 		g2.drawImage(img, 0, 0, img.getWidth(), img.getHeight(), getBackground(), getFocusCycleRootAncestor());
+		
+		g2.setStroke(new BasicStroke(4));
+		g2.drawRect(x, y, size, size);
 		
 		int window = 300;
 		g2.drawImage(img, img.getWidth(), 0, img.getWidth() + window, window, x, y, x + size, y + size, getFocusCycleRootAncestor());

@@ -82,7 +82,6 @@ class MyPanel10 extends JPanel
 		int windowSize = 300;
 		g2.drawImage(img,  img.getWidth(), 0, img.getWidth()+windowSize, windowSize, 
 				           x,  y,  x+size, y+size, null);
-	
 	}
 }
 
