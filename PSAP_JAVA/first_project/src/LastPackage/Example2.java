@@ -1,5 +1,6 @@
 package LastPackage;
 
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.MouseAdapter;
@@ -11,8 +12,19 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+class MyPoint {
+	float x,y;
+
+	public MyPoint(float x, float y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+	
+}
+
 class Line {
-	ArrayList<Point> pointArr = new ArrayList<>();
+	ArrayList<MyPoint> pointArr = new ArrayList<>();
 }
 
 class Example2Panel extends JPanel {
@@ -39,7 +51,8 @@ class Example2Panel extends JPanel {
 				// TODO Auto-generated method stub
 				super.mouseDragged(e);
 				Line line = lineArr.get(lineArr.size()-1);
-				line.pointArr.add(new Point(e.getX(), e.getY()));
+				Dimension d = getSize();
+				line.pointArr.add(new MyPoint((float)e.getX()/(float)d.width, (float)e.getY()/(float)d.height));
 				repaint();
 			}
 		});
@@ -52,11 +65,11 @@ class Example2Panel extends JPanel {
 		// TODO Auto-generated method stub
 		super.paintComponent(g);
 		for (int j = 0; j < lineArr.size(); j++) {
-			ArrayList<Point> pointArr = lineArr.get(j).pointArr;
+			ArrayList<MyPoint> pointArr = lineArr.get(j).pointArr;
 			for (int i = 0; i < pointArr.size() - 1; i++) {
-				Point p1 = pointArr.get(i);
-				Point p2 = pointArr.get(i+1);
-				g.drawLine(p1.x, p1.y, p2.x, p2.y);
+				MyPoint p1 = pointArr.get(i);
+				MyPoint p2 = pointArr.get(i+1);
+				g.drawLine((int)(p1.x *getWidth()), (int)(p1.y*getHeight()), (int)(p2.x*getWidth()), (int)(p2.y*getHeight()));
 			}
 		}
 		label.setText("Count Line : " + lineArr.size());
