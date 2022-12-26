@@ -1,13 +1,13 @@
 package org.blockbreak;
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
-import java.util.Iterator;
-import java.util.Random;
+import java.io.IOException;
+import java.net.URL;
+import java.util.*;
 
 abstract class VisualObject {
     float x;
@@ -176,9 +176,6 @@ class Ball extends VisualObject {
         Ball clone2 = new Ball(x, y, color, preX, preY, vx, vy, alive, walls);
 
         float r = (float) Math.hypot(vx, vy);
-        // 수직 기둥을 기준으로 각도가 나온다고 생각하면 됨
-        // (5, 5) : 45.0
-        // (-5, 5) : -45.0
         float theta1 = (float) Math.atan2(vx, vy) - 3.14f / 3.0f;
         clone1.vx = r * (float) Math.sin(theta1);
         clone1.vy = r * (float) Math.cos(theta1);
@@ -217,6 +214,7 @@ class Racket extends Wall {
     @Override
     void collisionProcess(VisualObject vo) {
         super.collisionProcess(vo);
+        JavaHW5.bgm.makeClip("audios/Racket.wav");
     }
 
     float getRelativePosition(Ball ball) {
@@ -278,6 +276,11 @@ class Block extends Wall {
         Block fadeOutBlock = new Block(x, y, color, width, height);
         fadeOutBlock.fadeOutCount = 1;
         PlayPanel.fadeOutBlocks.add(fadeOutBlock);
+        if (special) {
+            JavaHW5.bgm.makeClip("audios/SpecialBlockBreak.wav");
+            return;
+        }
+        JavaHW5.bgm.makeClip("audios/BlockBreak.wav");
     }
 
     @Override
@@ -294,6 +297,41 @@ class Block extends Wall {
     }
 }
 
+class BackGroundMusic implements LineListener{
+    Clip clip;
+    URL url;
+    AudioInputStream audioStream;
+    ClassLoader classLoader;
+    void makeClip(String filename) {
+        classLoader = getClass().getClassLoader();
+        try {
+            if (clip != null && clip.isRunning())
+                clip.stop();
+            clip = AudioSystem.getClip();
+            url = classLoader.getResource(filename);
+            audioStream = AudioSystem.getAudioInputStream(url);
+            clip.open(audioStream);
+            clip.start();
+
+            clip.addLineListener(this);
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        } catch (UnsupportedAudioFileException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void update(LineEvent event) {
+        if(event.getType() == LineEvent.Type.STOP) {
+            clip.setFramePosition(0);
+        }
+        if(event.getType() == LineEvent.Type.STOP) {
+            clip.setFramePosition(0);
+        }
+    }
+}
+
 class PlayPanel extends JPanel implements Runnable {
     static ArrayList<Ball> cloneBalls = new ArrayList<Ball>();
     static ArrayList<Block> fadeOutBlocks = new ArrayList<Block>();
@@ -304,6 +342,7 @@ class PlayPanel extends JPanel implements Runnable {
     int currentScore;
     Thread thread;
     JavaHW5 frame;
+
 
     public PlayPanel(JavaHW5 frame) {
         setFocusable(true);
@@ -402,6 +441,8 @@ class PlayPanel extends JPanel implements Runnable {
                 }
                 if (balls.size() == 0) {
                     System.out.println("Game Over...");
+                    JavaHW5.bgm.makeClip("audios/GameOver.wav");
+
                     if (EndPanel.maxScore < EndPanel.currentScore)
                         EndPanel.maxScore = EndPanel.currentScore;
                     frame.cards.show(frame.getContentPane(), "EndPanel");
@@ -410,7 +451,10 @@ class PlayPanel extends JPanel implements Runnable {
                 }
                 if (walls.size() == 4) {
                     System.out.println("Road Next Round...");
+                    JavaHW5.bgm.makeClip("audios/RoundClear.wav");
+                    Thread.sleep(1000);
                     initComponent(++round);
+
                     break;
                 }
                 Thread.sleep(30);
@@ -455,9 +499,18 @@ class PlayPanel extends JPanel implements Runnable {
 class TitlePanel extends JPanel implements Runnable{
     boolean textVisible;
     public TitlePanel(JavaHW5 frame) {
+
         setFocusable(true);
         textVisible = false;
 
+        initListenerSetting(frame);
+
+        Thread thread = new Thread(this);
+        thread.start();
+        JavaHW5.bgm.makeClip("audios/Title.wav");
+    }
+
+    void initListenerSetting(JavaHW5 frame) {
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -469,8 +522,6 @@ class TitlePanel extends JPanel implements Runnable{
                 }
             }
         });
-        Thread thread = new Thread(this);
-        thread.start();
     }
 
     @Override
@@ -522,12 +573,12 @@ class EndPanel extends JPanel implements Runnable{
 
     public EndPanel(JavaHW5 frame) {
         setFocusable(true);
-
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
                 super.keyPressed(e);
                 if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+                    JavaHW5.bgm.makeClip("audios/Title.wav");
                     frame.cards.show(frame.getContentPane(), "TitlePanel");
                     frame.titlePanel.requestFocus();
                     currentScore = 0;
@@ -596,6 +647,7 @@ public class JavaHW5 extends JFrame {
     TitlePanel titlePanel;
     PlayPanel playPanel;
     EndPanel endPanel;
+    static BackGroundMusic bgm;
 
     public JavaHW5() {
         setTitle("Block Break");
@@ -603,6 +655,9 @@ public class JavaHW5 extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         setLayout(cards);
+
+        bgm = new BackGroundMusic();
+
 
         titlePanel = new TitlePanel(this);
         add("TitlePanel", titlePanel);

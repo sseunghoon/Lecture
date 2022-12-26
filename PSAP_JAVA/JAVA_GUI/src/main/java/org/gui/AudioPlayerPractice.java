@@ -21,8 +21,8 @@ class AudioPlayerPanel extends JPanel implements LineListener{
         try {
             clip = AudioSystem.getClip();
 
-            URL url = getClass().getResource("soundtest.wav");
-
+            URL url = getClass().getClassLoader().getResource("soundtest.wav");
+            System.out.println(url);
 //			File audioFile = new File("audios/soundtest.wav");
 //			AudioInputStream audioStream
 //				= AudioSystem.getAudioInputStream(audioFile);
